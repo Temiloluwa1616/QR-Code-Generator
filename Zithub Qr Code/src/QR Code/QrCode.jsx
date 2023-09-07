@@ -3,6 +3,7 @@ import QRCode from 'qrcode.react';
 import { ClipLoader } from 'react-spinners';
 import { saveAs } from 'file-saver';
 import { ChromePicker } from 'react-color';
+import nithub from '../assets/nithub.png'
 
 function QrCode() {
   const [input, setInput] = useState('');
@@ -80,22 +81,22 @@ setColor(color.hex)
   }
 
   return (
-    <div className='h-screen' >
+    <div className='h-screen bg-[#f3f7fa]' >
       <div className='bg-[#11ab7c]' style={{ boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.2)' }}>
-        <h1 className='font-bold text-[2rem] p-[1.5rem] text-white' >NITHUB</h1>
+       <img src={nithub} alt="NITHUB" className='p-4 mb-2 w-[15rem]'/>
       </div>
 
       
 
       <div className='bg-[#f3f7fa]  p-4'>
-        <div className='flex mt-5 px-[15rem] gap-[10rem] bg-[#f3f7fa] rounded-xl h-[30rem]' style={{ boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.2)' }}>
+        <div className='flex  px-[15rem] gap-[10rem] bg-[#f3f7fa] rounded-xl h-[30rem]' style={{ boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.2)' }}>
 
           <div className='p-3 mt-[5rem] bg-white rounded-xl h-[20rem]' style={{ boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.2)' }}>
             <label htmlFor="url" className='block font-medium text-[15px]  mb-2'>YOUR URL</label>
             <input
               type="text"
               value={input}
-              className='w-[26.5rem] p-2 border border-white rounded bg-gray-200 '
+              className='w-[26.5rem] p-2 border border-white rounded bg-gray-200'
               placeholder='https// '
               onChange={(e) => setInput(e.target.value)}
             />
