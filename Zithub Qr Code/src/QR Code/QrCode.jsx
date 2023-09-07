@@ -3,7 +3,7 @@ import QRCode from 'qrcode.react';
 import { ClipLoader } from 'react-spinners';
 import { saveAs } from 'file-saver';
 import { ChromePicker } from 'react-color';
-import nithub from '../assets/nithub.png'
+import logo from '../assets/nit.png';
 
 function QrCode() {
   const [input, setInput] = useState('');
@@ -82,8 +82,8 @@ setColor(color.hex)
 
   return (
     <div className='h-screen bg-[#f3f7fa]' >
-      <div className='bg-[#11ab7c]' style={{ boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.2)' }}>
-       <img src={nithub} alt="NITHUB" className='p-4 mb-2 w-[15rem]'/>
+      <div className='bg-[#054080]' style={{ boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.2)' }}>
+       <img src={logo} alt="NITHUB" className='p-4 mb-2 w-[13rem] '/>
       </div>
 
       
@@ -115,7 +115,7 @@ setColor(color.hex)
             )}
 
             <div className='mt-9 text-center'>
-            <button className='bg-[#11ab7c] rounded-xl p-2 text-white font-medium ' onClick={handlegenerateQrcode}
+            <button className='bg-[#054080] rounded-xl p-2 text-white font-medium ' onClick={handlegenerateQrcode}
               disabled={loading}
               style={{ width: '20rem' }}>
                 {loading ? (<ClipLoader color="white" loading={loading} size={20} />) : ("Generate QR Code")}
@@ -126,7 +126,7 @@ setColor(color.hex)
      
       <div className='mt-3 text-center'>
         <button
-          className='bg-[#11ab7c] w-[20rem] mt-3 rounded-xl p-2 text-white font-medium'
+          className='bg-[#054080] w-[20rem] mt-3 rounded-xl p-2 text-white font-medium'
           onClick={() => fileInputRef.current.click()} 
         >
           Upload Logo
